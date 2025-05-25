@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials</title>
+
+    <style>
+/* === Base Styling === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0b0f1a; /* blackish blue */
+  color: #ffffff;
+  
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #101828;
+  border-bottom: 1px solid #1f2a3a;
+}
+
+header a {
+  color: rgba(44, 183, 183, 0.766);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+header a:hover {
+  color: #ffffff;
+}
+
+h1.title {
+  font-size: 2.5rem;
+  margin: 30px 0;
+  color: #13cd8c;
+}
+
+/* === Course Container Styling === */
+.Courses {
+  padding: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.Course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* === Individual Card Styling === */
+.Course-card {
+  background-color: #1a2233;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.Course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.Course-card img {
+  width: 70%;
+  max-height: 161px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.Course-card h3 {
+  margin: 100px 0;
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.Course-card p {
+  font-size: 0.95rem;
+  color: #c5c9d4;
+  margin-bottom:20px;
+}
+
+/* === Button Styling === */
+button {
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0d6efd;
+}
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html">
+           <span class="font-semibold">&lt;/&gt;</span>
+           <span class="font-bold">CodeWithDev</span>
+        </a>
+        
+        <a href="home.html">Home</a>
+        
+        <a  href="tutorials.html">Tutorials</a>
+        <a  href="blog.html">Blog</a>
+        <a  href="notes.html">Notes</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">SignUp</a>
+
+    </header>
+
+    <hr>
+
+    <center><h1 class="title">Tutorials</h1></center>
+
+    <main>
+        <section class="Courses">
+            <div class="Course-list">
+
+                <div class="Course-card">
+                    <img src="html.webp" alt="Course-1">
+                    <h3>HTML Tutorial</h3>
+                    <p>The word hypertext markup language is composed of the words “hypertext” and “mar...</p>
+                    <button><a href="https://www.codewithharry.com/tutorial/overview/html-home">Start Learning!</a></button>
+                </div>
+
+
+                <div class="Course-card">
+                    <img src="css.webp" alt="Course-2">
+                    <h3>CSS Tutorial</h3>
+                    <p>CSS stands for Cascading Style Sheets. It describes how HTML elements are to be ...</p>
+                    <button><a href="https://www.codewithharry.com/tutorial/overview/css-introduction">Start Learning!</a></button>
+                </div>
+
+
+
+                <div class="Course-card">
+                    <img src="js.webp" alt="Course-3">
+                    <h3>JavaScript Tutorial</h3>
+                    <p>JavaScript is a lightweight, cross-platform, OOP language.</p>
+                    <button><a href="https://www.codewithharry.com/tutorial/overview/js">Start Learning!</a></button>
+                </div>
+
+
+
+
+                <div class="Course-card">
+                    <img src="java.webp" alt="Course-4">
+                    <h3>Java Tutorial</h3>
+                    <p>Java is a programming language, created in 1995. More than 3 billion devices run...</p>
+                    <button><a href="https://www.codewithharry.com/tutorial/overview/java">Start Learning!</a></button>
+                </div>
+
+
+
+
+                <div class="Course-card">
+                    <img src="python.webp" alt="Course-5">
+                    <h3>Python Tutorial</h3>
+                    <p>Python is a high-level, interpreted, general-purpose programming language.</p>
+                    <button><a href="https://www.codewithharry.com/tutorial/overview/python">Start Learning!</a></button>
+                </div>
+
+
+
+
+                <div class="Course-card">
+                    <img src="c++.webp" alt="Course-6">
+                    <h3>C++ Tutorial</h3>
+                    <p>C++ is a cross-platform language that can be used to create high-performance app...</p>
+                    <button><a href="https://www.codewithharry.com/tutorial/overview/cplusplus-overview">Start Learning!</a></button>
+                </div>
+
+
+
+
+                <div class="Course-card">
+                    <img src="reactjs.webp" alt="Course-7">
+                    <h3>React.Js Tutorial</h3>
+                    <p>React is an open-source front-end JavaScript library. This series will cover Rea...</p>
+                    <button><a href="https://www.codewithharry.com/tutorial/overview/react-home">Start Learning!</a></button>
+                </div>
+
+
+
+
+                <div class="Course-card">
+                    <img src="php.webp" alt="Course-8">
+                    <h3>PHP Tutorial</h3>
+                    <p>The term PHP is an acronym for PHP: Hypertext Preprocessor. It is a server side ...</p>
+
+                    <button><a href="https://www.codewithharry.com/tutorial/overview/php-overview">Start Learning!</a></button>
+                </div>
+
+
+
+
+                <div class="Course-card">
+                    <img src="c.webp" alt="Course-9">
+                    <h3>C Tutorial</h3>
+                    <p>C language is considered as the mother language of all programming languages. It...</p>
+
+                    <button><a href="https://www.codewithharry.com/tutorial/overview/c-overview">Start Learning!</a></button>
+                </div>
+
+
+
+            </div>
+        </section>
+    </main>
+
+
+</body>
+</html>

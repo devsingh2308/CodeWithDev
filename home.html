@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeWithDev</title>
+
+    <style>
+      
+  /* === Base Reset & Styling === */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0f1a; /* Blackish blue */
+    color: #ffffff;
+    line-height: 1.6;
+  }
+
+  /* === Header === */
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #101828;
+    border-bottom: 1px solid #1f2a3a;
+  }
+
+  header a {
+    color: rgba(44, 183, 183, 0.85);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+  }
+
+  header a:hover {
+    color: #ffffff;
+  }
+
+  h1.title, h1, h2 {
+    text-align: center;
+    color: #13cd8c;
+    margin: 20px 0;
+  }
+
+  /* === Span Box Styling === */
+  span {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #1a2233;
+    border: 1px solid #13cd8c;
+    border-radius: 8px;
+    color: #13cd8c;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  /* === Paragraphs === */
+  p {
+    text-align: center;
+    color: #cbd5e1;
+    margin: 10px 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* === Buttons === */
+  button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #1e90ff, #00bcd4);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background: linear-gradient(135deg, #0d6efd, #00acc1);
+    transform: scale(1.05);
+  }
+
+  /* === Course Stats === */
+  .stats-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #101828; /* dark background */
+  border: 1px solid #1f2a3a;
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 12px;
+  max-width: 800px;
+  color: white;
+  text-align: center;
+  
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #13cd8c; /* highlight color */
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #c5c9d4;
+  margin-top: 5px;
+}
+
+
+ 
+
+  /* === Call to Action Section === */
+  section:last-of-type {
+    padding: 40px 20px;
+    background-color: #0b0f1a;
+    text-align: center;
+  }
+
+  section:last-of-type h1 {
+    color: #13cd8c;
+    font-size: 2rem;
+  }
+
+  /* === CTA Buttons === */
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .stats {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    
+
+    .cta-buttons {
+      flex-direction: column;
+    }
+  }
+
+ .typed-cursor {
+      font-weight: bold;
+      color: #13cd8c;
+      font-size: 1.8rem;
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+</style>
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <header>
+        <a href="home.html">
+        <spa class="font-semibold">&lt;/&gt;</spa>
+        <spa class="font-bold">CodeWithDev</spa>
+        </a>
+            <a href="home.html">Home</a>
+            
+            <a href="tutorials.html">Tutorials</a>
+            <a href="blog.html">Blog</a>
+            <a href="notes.html">Notes</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">SignUp</a>
+    </header>
+
+    <hr>
+
+    
+    <div>
+       <center> <span>Learn coding in a right way </span></center>
+    </div>
+
+    
+     <center><h1>Welcome To CodeWithDev</h1>
+    <h2>
+    Learn
+    <spa id="language" class="highlighted"></spa>
+    <spa class="typed-cursor">|</spa>
+  </h2>
+
+</center>
+   
+    <p>Confused about which course to take? We've got you covered! Browse courses and discover the best option for you. It's free!
+        <!-- -->
+        <strong class="text-primary dark:text-white">CodeWithDev</strong>
+        is my effort to teach the basics and those coding techniques in a short time that took me years to master.
+    </p>
+
+    <div>
+        <center><a href="tutorials.html">
+            <button>Explore Courses</button>
+        </a>
+
+        <a href="blog.html">
+            <button>Read Articles</button>
+        </a></center>
+    </div>
+
+
+    <div class="stats-box">
+  <div class="stat">
+    <span class="stat-value">100+</span>
+    <span class="stat-label">Courses</span>
+  </div>
+
+  <div class="stat">
+    <span class="stat-value">500+</span>
+    <span class="stat-label">Students</span>
+  </div>
+
+  <div class="stat">
+    <span class="stat-value">5.0</span>
+    <span class="stat-label">Rating</span>
+  </div>
+</div>
+
+
+
+    <hr>
+
+    
+    <section>
+        <div>
+            
+            <h1>Code Smarter with Real-World Practice</h1>
+            <p>At CodeWithDev, you don't just learn code — you engage in practical exercises that reflect real-world scenarios. From beginner-friendly lessons to advanced courses trusted by professionals, we prepare you for real-world projects.</p>
+        </div>
+    </section>
+
+    
+      <div class="stat-box">
+        <div class="stat">
+          <span ><h1 class="font-color">Some Popular Courses</h1>
+          <a><button>Web Development</button></a>
+          <a><button>Learn DSA</button></a>
+          <a><button>Learn Python </button></a>
+          <a><button>Learn Java</button></a>
+          <a><button>Learn C++</button></a></span>
+       </div>
+      </div>
+
+
+    <section>
+        <div>
+            <h1>Empowering Aspiring Developers to Build Their Future in Tech!</h1>
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+
+    <div class="stat-box">
+        <div class="stat-value">
+            <h2>Start Your Coding Journey </h2>
+            <p>Learn coding step-by-step with India's most loved programming mentor.</p>
+
+            <div>
+                <a href="/login">
+                    <center><button>Start Now</button></center>
+                </a>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+
+    <script>
+    const words = ["C++", "Java", "Python", "DSA"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    const languageElement = document.getElementById("language");
+
+    function typeWord() {
+      const currentWord = words[wordIndex];
+      if (charIndex <= currentWord.length) {
+        languageElement.textContent = currentWord.substring(0, charIndex);
+        charIndex++;
+        setTimeout(typeWord, 150);
+      } else {
+        // Pause before deleting
+        setTimeout(eraseWord, 1500);
+      }
+    }
+
+    function eraseWord() {
+      const currentWord = words[wordIndex];
+      if (charIndex >= 0) {
+        languageElement.textContent = currentWord.substring(0, charIndex);
+        charIndex--;
+        setTimeout(eraseWord, 100);
+      } else {
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(typeWord, 500);
+      }
+    }
+
+    typeWord(); // start animation
+  </script>
+
+
+
+
+    
+</body>
+</html>

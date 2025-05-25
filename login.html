@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+
+    /* === Base Reset & Styling === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b0f1a;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* === Header === */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #1d2a43;
+  border-bottom: 1px solid #5272a1;
+}
+
+header a {
+  color: rgba(44, 183, 183, 0.85);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+header a:hover {
+  color: #ffffff;
+}
+
+/* === Login Section === */
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+.Login-container {
+  background-color: #1a2238;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(44, 183, 183, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.Login-container .title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #2cb7b7;
+}
+
+/* === Form Styles === */
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #28344d;
+  color: #fff;
+  font-size: 1rem;
+}
+
+form input:focus {
+  outline: none;
+  border: 1px solid #2cb7b7;
+  background-color: #1f2a44;
+}
+
+/* === Button === */
+form button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #2cb7b7;
+  color: #0b0f1a;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #23a1a1;
+}
+
+/* === Signup Link === */
+.signup-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.signup-link a {
+  color: #2cb7b7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* === Responsive === */
+@media (max-width: 500px) {
+  .Login-container {
+    padding: 1.5rem;
+  }
+
+  .Login-container .title {
+    font-size: 1.25rem;
+  }
+}
+</style>
+
+</head>
+<body>
+    <header>
+        <a href="home.html">
+        <spa class="font-semibold">&lt;/&gt;</spa>
+        <spa class="font-bold">CodeWithDev</spa>
+        </a>
+            <a href="home.html">Home</a>
+           
+            <a href="tutorials.html">Tutorials</a>
+            <a href="blog.html">Blog</a>
+            <a href="notes.html">Notes</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">SignUp</a>
+    </header>
+    <hr>
+
+
+    <main>
+        <section class="Login">
+            <div class="Login-container">
+                
+                    <h2 class="title">Login To Your Account </h2>
+                    <form action="#" method="POST">
+                     <input type="email" placeholder="Email" required>
+                     <input type="password" placeholder="Password" required>
+                     <button type="submit">Login</button>
+                     <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+                    </form>
+
+                
+            </div>
+        </section>
+    </main>
+</body>
+</html>

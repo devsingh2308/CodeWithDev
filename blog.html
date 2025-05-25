@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+
+
+<style>
+
+   
+  /* === Base Reset & Styling === */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0f1a; /* Blackish blue */
+    color: #ffffff;
+    line-height: 1.6;
+  }
+
+  /* === Header === */
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #101828;
+    border-bottom: 1px solid #1f2a3a;
+  }
+
+  header a {
+    color: rgba(44, 183, 183, 0.85);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+  }
+
+  header a:hover {
+    color: #ffffff;
+  }
+
+  /* === Title === */
+  h1.title {
+    font-size: 2.8rem;
+    margin: 40px 0 20px;
+    color: #13cd8c;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* === Blog Section === */
+  .blogs {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #0b0f1a; /* Ensure consistent blackish-blue background */
+  }
+
+  .blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  /* === Blog Card === */
+  .blog-card {
+    background-color: #121a2e; /* darker blue-black */
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  }
+
+  .blog-card img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .blog-card h3 {
+    margin: 10px 0;
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+
+  .blog-card p {
+    font-size: 1rem;
+    color: #d1d5db;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  /* === Button === */
+  button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #1e90ff, #00bcd4);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  button:hover {
+    background: linear-gradient(135deg, #0d6efd, #00acc1);
+    transform: scale(1.05);
+  }
+
+
+
+        
+    
+</style>
+
+</head>
+<body>
+    <header>
+        <a href="home.html">
+           <span class="font-semibold">&lt;/&gt;</span>
+           <span class="font-bold">CodeWithDev</span>
+        </a>
+        
+        <a href="home.html">Home</a>
+
+        <a  href="tutorials.html">Tutorials</a>
+        <a  href="blog.html">Blog</a>
+        <a  href="notes.html">Notes</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">SignUp</a>
+
+    </header>
+
+    <hr>
+
+    <center><h1 class="title">Blogs</h1></center>
+
+    <main>
+        <section class="blogs">
+            <div class="blog-list">
+
+                <div class="blog-card">
+                    <img src="Integrate.webp" alt="blog-1">
+                    <h3>How to integrate MongoDB into your...</h3>
+                    <p>Learn how to seamlessly integrate MongoDB into your Next.js applications with best practices for efficient...</p>
+                    <button><a href="https://www.codewithharry.com/blogpost/how-to-integrate-mongodb-into-your-nextjs-apps">Read More!</a></button>
+                </div>
+
+
+
+                <div class="blog-card">
+                    <img src="Deploy.webp" alt="blog-2">
+                    <h3>How to host a Next.js app in Production on...</h3>
+                    <p>Learn how to deploy a Next.js application in a production environment on an Ubuntu VPS with this...</p>
+                    <button><a href="https://www.codewithharry.com/blogpost/hosting-a-next-js-app-in-production-on-ubuntu-vps">Read More!</a></button>
+                </div>
+
+
+
+
+                <div class="blog-card">
+                    <img src="Stackry.webp" alt="blog-3">
+                    <h3>A Comprehensive Guide to Using Stackry</h3>
+                    <p>In today's interconnected world, the desire for cutting-edge tech gadgets, unique international products, and exclusive...</p>
+                    <button><a href="https://www.codewithharry.com/blogpost/stackery-international-shopping-guide-india">Read More!</a></button>
+                </div>
+
+
+
+
+                <div class="blog-card">
+                    <img src="Trading.webp" alt="blog-4">
+                    <h3>How Algorithmic Trading Systems Work</h3>
+                    <p>In India, the popularity of online trading has helped transform the financial landscape. This has led to over 20% of...</p>
+                    <button><a href="https://www.codewithharry.com/blogpost/how-algorithmic-trading-systems-work">Read More!</a></button>
+                </div>
+
+
+
+
+                <div class="blog-card">
+                    <img src="Email Vali.webp" alt="blog-5">
+                    <h3>Build an Email Validator with HTML...</h3>
+                    <p>Learn how to create a responsive Email Validator using HTML, CSS, and JavaScript. This step-by-step guide...</p>
+                    <button><a href="https://www.codewithharry.com/blogpost/email-validator-using-html-css-js">Read More!</a></button>
+                </div>
+
+
+
+                <div class="blog-card">
+                    <img src="Solved python.webp" alt="blog-6">
+                    <h3>[Solved] Python AttributeError: obj...</h3>
+                    <p>Learn about Attribute Errors in Python, why they occur, and how to handle them effectively...</p>
+                    <button><a href="https://www.codewithharry.com/blogpost/attribute-error-in-python">Read More!</a></button>
+                </div>
+
+
+
+
+                <div class="blog-card">
+                    <img src="Python not fount.webp" alt="blog-7">
+                    <h3>[Solved] python was not found; run without...</h3>
+                    <p>Encountered the 'Python was not found' error on your Windows system? Our step-by-step guide walks you through the process...</p>
+                    <button><a href="https://www.codewithharry.com/blogpost/solving-python-not-found-run-without-arguments">Read More!</a></button>
+                </div>
+
+
+
+
+
+                <div class="blog-card">
+                    <img src="Python Install.webp" alt="blog-8">
+                    <h3>How to find the Python Installation Path on Windows?</h3>
+                    <p>Discover how to locate the Python installation path on your Windows system using two effective methods: the traditional Command Prompt...</p>
+                    <button><a href="https://www.codewithharry.com/blogpost/how-to-find-python-installation-path">Read More!</a></button>
+                </div>
+
+
+
+
+
+                <div class="blog-card">
+                    <img src="generate no..webp" alt="blog-9">
+                    <h3>How to Generate Random Numbers in...</h3>
+                    <p>A comprehensive guide to generating random numbers in C using the rand() and srand() functions, with examples and output.</p>
+                    <button><a href="https://www.codewithharry.com/blogpost/c-random-numbers-guide">Read More!</a></button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>
