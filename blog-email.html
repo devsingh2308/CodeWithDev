@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email Validator using HTML, CSS, and JS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0b0f1a;
+      color: #ffffff;
+      line-height: 1.8;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #1d2a43;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #5272a1;
+    }
+
+    header h1 {
+      color: rgba(44, 183, 183, 0.9);
+      font-size: 1.8rem;
+    }
+
+    article {
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    article h2 {
+      color: #2cb7b7;
+      margin-top: 20px;
+    }
+
+    article p {
+      margin: 15px 0;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #2cb7b7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    a.button:hover {
+      background-color: #1aa0a0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>&lt;/&gt; CodeWithDev Blog</h1>
+  </header>
+
+  <article>
+    <h2>Email Validator using HTML, CSS, and JavaScript</h2>
+
+    <p>
+      Validating user input is a crucial step in any web application, especially for forms that collect email addresses. An email validator ensures that users enter a correctly formatted email address before submitting the form.
+    </p>
+
+    <p>
+      In this tutorial, you’ll learn how to build a simple email validator using HTML, CSS for styling, and JavaScript for logic. It’s a great project for beginners to understand regular expressions and form validation.
+    </p>
+
+    <p>
+      The HTML consists of a basic input field and a submit button. CSS is used to style the form and display validation feedback. JavaScript is where the main functionality lies—it checks if the entered email matches a valid email pattern using a regex.
+    </p>
+
+    <p>
+      For example, the regular expression `/^\S+@\S+\.\S+$/` is commonly used to validate a basic email format. When the user types in an email and hits the button, JavaScript checks it and displays whether the input is valid or not.
+    </p>
+
+    <p>
+      You can further enhance the experience by showing real-time validation as the user types, using JavaScript `input` or `keyup` events. Additionally, you can add visual cues like border color changes or error messages.
+    </p>
+
+    <p>
+      This kind of validation is only client-side. For production applications, you must also validate on the server side to ensure security and data integrity.
+    </p>
+
+    <p>
+      Projects like these help solidify your understanding of DOM manipulation, form behavior, and regex. They are also great for adding to a beginner's portfolio.
+    </p>
+
+    
+
+</body>
+</html>

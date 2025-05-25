@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C++ Random Numbers Guide</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0b0f1a;
+      color: #ffffff;
+      line-height: 1.8;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #1d2a43;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #5272a1;
+    }
+
+    header h1 {
+      color: rgba(44, 183, 183, 0.9);
+      font-size: 1.8rem;
+    }
+
+    article {
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    article h2 {
+      color: #2cb7b7;
+      margin-bottom: 20px;
+    }
+
+    article p {
+      margin: 15px 0;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #2cb7b7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    a.button:hover {
+      background-color: #1aa0a0;
+    }
+
+    code {
+      background-color: #1f2a3a;
+      padding: 3px 6px;
+      border-radius: 4px;
+      color: #8bd1d1;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>&lt;/&gt; CodeWithDev Blog</h1>
+  </header>
+
+  <article>
+    <h2>C++ Random Numbers Guide</h2>
+
+    <p>
+      Generating random numbers in C++ is an essential skill for many types of applications, including games, simulations, and randomized testing. C++ provides both traditional methods using <code>rand()</code> and modern approaches with the C++11 random library.
+    </p>
+
+    <p>
+      The traditional way involves calling <code>rand()</code> from <code>&lt;cstdlib&gt;</code> and seeding it with <code>srand()</code>:
+      <br><code>srand(time(0)); int num = rand();</code>
+      <br>This works but lacks advanced features like distribution control and reproducibility.
+    </p>
+
+    <p>
+      For more robust and reliable random number generation, C++11 introduced the <code>&lt;random&gt;</code> header, which includes engines (like <code>mt19937</code>) and distributions (like <code>uniform_int_distribution</code>).
+    </p>
+
+    <p>
+      Example:
+      <br>
+      <code>
+        std::random_device rd;<br>
+        std::mt19937 gen(rd());<br>
+        std::uniform_int_distribution&lt;&gt; dis(1, 10);<br>
+        int random_number = dis(gen);
+      </code>
+    </p>
+
+    <p>
+      This modern approach allows you to generate random numbers with full control over distributions such as uniform, normal, or binomial, making it ideal for scientific computing or AI simulations.
+    </p>
+
+    <p>
+      If reproducibility is important (e.g., in testing), use a fixed seed instead of <code>random_device</code>, like <code>std::mt19937 gen(1234);</code>. This guarantees the same sequence of numbers on each run.
+    </p>
+
+    <p>
+      In summary, while <code>rand()</code> may be quick and simple, the C++11 random library provides safer, scalable, and more versatile tools for modern development. It’s recommended for any serious application that involves randomness.
+    </p>
+
+   
+
+</body>
+</html>

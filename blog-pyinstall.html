@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Python Installation Path</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0b0f1a;
+      color: #ffffff;
+      line-height: 1.8;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #1d2a43;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #5272a1;
+    }
+
+    header h1 {
+      color: rgba(44, 183, 183, 0.9);
+      font-size: 1.8rem;
+    }
+
+    article {
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    article h2 {
+      color: #2cb7b7;
+      margin-bottom: 20px;
+    }
+
+    article p {
+      margin: 15px 0;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #2cb7b7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    a.button:hover {
+      background-color: #1aa0a0;
+    }
+
+    code {
+      background-color: #1f2a3a;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #8bd1d1;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>&lt;/&gt; CodeWithDev Blog</h1>
+  </header>
+
+  <article>
+    <h2>How to Find Python Installation Path</h2>
+
+    <p>
+      Sometimes you may need to locate the exact path where Python is installed—whether it's for configuring an IDE, setting environment variables, or troubleshooting issues. The process differs slightly depending on the OS you're using.
+    </p>
+
+    <p>
+      On Windows, one of the easiest ways is to open the Command Prompt and type:
+      <code>where python</code> or <code>where python3</code>
+    </p>
+
+    <p>
+      On Linux or macOS, open the Terminal and run:
+      <code>which python</code> or <code>which python3</code>
+    </p>
+
+    <p>
+      These commands will return the full file path of the Python executable currently in use. If no path is returned, Python might not be installed or not added to your system’s PATH.
+    </p>
+
+    <p>
+      If you're using an IDE like VSCode or PyCharm, they often have settings or a Python interpreter selector where you can view or modify the Python path being used.
+    </p>
+
+    <p>
+      In some cases, multiple Python versions can be installed, especially with tools like Anaconda or pyenv. To verify the Python version and its path, use:
+      <code>python -c "import sys; print(sys.executable)"</code>
+    </p>
+
+    <p>
+      This command will show you the path of the exact Python interpreter executing that script. It's especially useful in virtual environments.
+    </p>
+
+    <p>
+      If you’re using Windows Store’s version of Python, it might be installed under:
+      <code>C:\Users\YourUsername\AppData\Local\Microsoft\WindowsApps</code>
+      but that version may lack some components or admin privileges.
+    </p>
+
+    <p>
+      It's a good practice to keep track of your Python installations—especially if you're working on multiple projects or using multiple virtual environments.
+    </p>
+
+   
+
+</body>
+</html>

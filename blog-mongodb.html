@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to Integrate MongoDB into Your Next.js Apps</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0b0f1a;
+      color: #ffffff;
+      line-height: 1.8;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #1d2a43;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #5272a1;
+    }
+
+    header h1 {
+      color: rgba(44, 183, 183, 0.9);
+      font-size: 1.8rem;
+    }
+
+    article {
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    article h2 {
+      color: #2cb7b7;
+      margin-top: 20px;
+    }
+
+    article code {
+      background-color: #1a2639;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    article pre {
+      background-color: #1a2639;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #2cb7b7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    a.button:hover {
+      background-color: #1aa0a0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>&lt;/&gt; CodeWithDev Blog</h1>
+  </header>
+
+  <article>
+    <h2>How to Integrate MongoDB into Your Next.js Apps</h2>
+    <p>
+      MongoDB is a popular NoSQL database used with modern JavaScript frameworks like Next.js. Here's how you can connect it to your Next.js app.
+    </p>
+
+    <h3>1. Install Dependencies</h3>
+    <pre><code>npm install mongodb</code></pre>
+
+    <h3>2. Set Up Your MongoDB URI</h3>
+    <p>Add the URI to your <code>.env.local</code> file:</p>
+    <pre><code>MONGODB_URI=mongodb+srv://your_user:your_password@cluster.mongodb.net/myDatabase</code></pre>
+
+    <h3>3. Create a DB Connection File</h3>
+    <pre><code>
+// lib/mongodb.js
+import { MongoClient } from 'mongodb';
+
+const uri = process.env.MONGODB_URI;
+let client;
+let clientPromise;
+
+if (!process.env.MONGODB_URI) {
+  throw new Error('Add MongoDB URI to .env.local');
+}
+
+if (!global._mongoClientPromise) {
+  client = new MongoClient(uri);
+  global._mongoClientPromise = client.connect();
+}
+
+clientPromise = global._mongoClientPromise;
+export default clientPromise;
+    </code></pre>
+
+    <h3>4. Use It in API Routes</h3>
+    <pre><code>
+// pages/api/posts.js
+import clientPromise from '../../lib/mongodb';
+
+export default async function handler(req, res) {
+  const client = await clientPromise;
+  const db = client.db('your_db_name');
+  const posts = await db.collection('posts').find({}).toArray();
+  res.json(posts);
+}
+    </code></pre>
+
+    <p>
+      With this setup, you're ready to use MongoDB in your Next.js applications!
+    </p>
+
+    
+
+</body>
+</html>
